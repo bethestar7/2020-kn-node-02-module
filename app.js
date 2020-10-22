@@ -22,7 +22,7 @@ const app = express();
 app.listen(3000, () => { console.log('http://127.0.0.1:3000'); }); //서버 구동 / node app하면 포트 열리고 서버 돎. 근데 구현해서 res한건 없으니까 cannot get이 뜸
 
 //pug 사용하기
-//app.set('view engine', 'ejs')
+//app.set('view engine', 'ejs');
 app.set('view engine', 'pug'); //use는 미들웨어고 set은 app 객체에서 쓰이는 변수를 등록하는 것 / view page를 해석하는 엔진을 퍼그로 쓸 것이다
 app.set('views', './views'); //view들은 어느 폴더에 담겨있냐 / 퍼그파일들은 views 디렉토리 안에 있다 - 익스프레스한테 다 알려주는 것임
 app.locals.pretty = true; //클라이언트에게 응답하는 코드들을 이쁘게 보내주겠다는 뜻..(웹에서 우클릭 > 소스코드해서 볼 때 예쁘게 정렬됨)
